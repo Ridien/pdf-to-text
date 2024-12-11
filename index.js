@@ -6,8 +6,6 @@ const outputFolder = './output';
 
 async function processPdf(filePath) {
   try {
-    const files = await fs.readdir('./input');
-
     const buffer = await fs.readFile(filePath);
     const data = await pdfParse(buffer);
 
